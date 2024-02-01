@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="sidebar.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <!-- contant for side bar -->
+            <div class="h-100">
+                <div class="sidebar-logo text-center pt-3">
+                    <a href="#">Result Analysis</a>
+                </div>
+                <div class="divider"></div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Admin Elements
+                    </li>
+                    <li class="sidebar-item active">
+                        <a href="index.html" class="sidebar-link">
+                            <i class="bi bi-list-ul pe-2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="bi bi-menu-down pe-2"></i>Menu</a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="uplode-file.html" class="sidebar-link">Upload-File</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="fetch-data.html" class="sidebar-link">Fatch-Data</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="analysis.html" class="sidebar-link">
+                            <i class="bi bi-file-earmark-fill"></i></i> Analysis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="profile-placeholder.avif" class="avatar img-fluid rounded" alt="img">
+                                <span class="text-dark">Bikram Das</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#" class="dropdown-item"><i class="bi bi-person-circle"> </i>Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="bi bi-gear-fill"> </i>Settings & Privacy</a>
+                                <a href="#" class="dropdown-item"><i class="bi bi-info-circle"> </i>Help Center</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item"><i class="bi bi-box-arrow-left"> </i>Log-Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content p-4">
+                <div class="container-fluid">
+                    <h3 class="text-center">Uploded Files</h3>
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-2">
+                            <div class="row">
+                                <div class="col-lg-10 col-md-10 col-xl-12">
+                                    <form action="#">
+                                        <div class="card p-1">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div
+                                                        class="col-lg-10 col-md-10 col-12 mx-lg-0 ps-xl-0 ps-xl-0 ps-lg-0 ps-md-0 pe-lg-2 pe-md-2">
+                                                        <input type="search" name="search" id="#"
+                                                            class="form-control text-center" placeholder="Search File">
+                                                    </div>
+                                                    <div
+                                                        class="col-lg-2 col-md-2 col-12 d-flex justify-content-center mt-lg-0 mt-lg-0 mt-2 mt-md-0 pe-xl-0 ps-xl-0 pe-lg-0 pe-md-0 ps-lg-3 ps-md-3">
+                                                        <input type="submit" class="btn btn-primary">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2 col-md-10 offset-md-2">
+                            <div class="card flex-fill">
+                                <div class="card-header">
+                                    <h4 class="mb-0 h3 text-center ">Available Data</h4>
+                                </div>
+                                <div class="divider mb-2"></div>
+                                <table class="table table-striped table-hover mt-2">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Sl No</th>
+                                            <th scope="col">Course Id</th>
+                                            <th scope="col">Course Name</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</th>
+                                            <td>CA1601</td>
+                                            <td>Software Engineering</td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>CA1603</td>
+                                            <td>Python Programming</td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>CA1636</td>
+                                            <td>Data Analytics Using Python </td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>CA1637</td>
+                                            <td>Security and Privacy for Data Science</td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>CA1640</td>
+                                            <td>Cloud Computing and Security</td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>CA1641</td>
+                                            <td>Big Data and its Application in Cloud</td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>CA1661</td>
+                                            <td>Software Engineering Lab</td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>CA1663</td>
+                                            <td>Python Programming Lab</td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>CA1671</td>
+                                            <td>Project</td>
+                                            <td>
+                                                <a href="#" class="text-primary">View</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-12 text-center">
+                            <strong>Design By Bikram Das</strong>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
