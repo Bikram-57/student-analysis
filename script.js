@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Check screen width on page load and toggle sidebar accordingly
-  if (window.innerWidth <= 576) {
+  if (window.innerWidth <= 768) {
       sidebar.classList.add('collapsed'); // Mobile screen: Sidebar collapsed by default
   } else {
       sidebar.classList.remove('collapsed'); // Larger screen: Sidebar expanded by default
