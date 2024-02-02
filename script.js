@@ -13,16 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
       sidebar.classList.toggle('collapsed');
   }
 
-  // Function to check if the device is in landscape mode
-  function isLandscape() {
-      return window.innerWidth > window.innerHeight;
-  }
-
-  // Check screen width and device orientation on page load and toggle sidebar accordingly
-  if (window.innerWidth <= 576 || isLandscape()) {
-      sidebar.classList.add('collapsed'); // Mobile screen or landscape mode: Sidebar collapsed by default
+  // Check screen width on page load and toggle sidebar accordingly
+  if (window.innerWidth <= 768) {
+      sidebar.classList.add('collapsed'); // Mobile screen: Sidebar collapsed by default
   } else {
-      sidebar.classList.remove('collapsed'); // Larger screen in portrait mode: Sidebar expanded by default
+      sidebar.classList.remove('collapsed'); // Larger screen: Sidebar expanded by default
   }
 
   // Toggle sidebar when sidebar toggle button is clicked
@@ -30,12 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
       toggleSidebar();
   });
 
-  // Toggle sidebar when window is resized or device orientation changes
+  // Toggle sidebar when window is resized
   window.addEventListener('resize', function () {
-      if (window.innerWidth > 576 && !isLandscape()) {
-          sidebar.classList.remove('collapsed'); // Larger screen in portrait mode: Expand sidebar
+      if (window.innerWidth > 768) {
+          sidebar.classList.remove('collapsed'); // Larger screen: Expand sidebar
       } else {
-          sidebar.classList.add('collapsed'); // Mobile screen or landscape mode: Collapse sidebar
+          sidebar.classList.add('collapsed'); // Mobile screen: Collapse sidebar
       }
   });
 });
