@@ -135,3 +135,14 @@ img{
 .dashboard .card{
   height: 10rem;
 }
+/* Remove box-shadow from select & form */
+.form-select:focus,
+.form-control:focus{
+  box-shadow: none;
+}
+
+/* Remove radius from select & form */
+.form-select,
+.form-control{
+  border-radius: 0px;
+}
