@@ -16,58 +16,56 @@
             <!-- Content for sidebar -->
             <div class="h-100">
                 <div class="sidebar-logo">
-                    <a href="#">Student Analysis</a>
+                    <a href="#">Result Analysis</a>
                 </div>
                 <ul class="sidear-nav">
-                    <li class="sidebar-header">
-                        Admin Element
-                    </li>
                     <li class="sidebar-item">
                         <a href="dashboard.html" class="sidebar-link">
                             <i class="bi bi-sliders"></i> Dashboard
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <span class="sidebar-link">
                             <i class="bi bi-three-dots-vertical"></i> Menu
-                        </a>
+                        </span>
                     </li>
-                    <li class="sidebar-item">
+                    <li class="sidebar-item active">
                         <a href="upload-file.html" class="sidebar-nested-link">
-                            <i class="bi bi-file-earmark-arrow-up-fill"></i> Uplode-Data
+                            <i class="bi bi-file-earmark-arrow-up-fill"></i> Upload Data
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a href="fetch-data.html" class="sidebar-nested-link">
-                            <i class="bi bi-file-earmark-arrow-down-fill"></i> Fetch-Data
+                            <i class="bi bi-file-earmark-arrow-down-fill"></i> Fetch Data
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <span class="sidebar-link">
                             <i class="bi bi-clipboard2-data-fill"></i> Analysis
+                        </span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="semester.html" class="sidebar-nested-link">
+                            <i class="bi bi-calendar-fill"></i> Semester Wise
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a href="yearly.html" class="sidebar-nested-link">
-                            <i class="bi bi-calendar-fill"></i> Yearly
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="semester.html" class="sidebar-nested-link">
-                            <i class="bi bi-calendar3"></i> Semly
+                            <i class="bi bi-calendar3"></i> Year Wise
                         </a>
                     </li>
                 </ul>
             </div>
         </aside>
 
+
         <div class="main">
             <nav class="navbar navbar-expand px-3 border-bottom bg-light">
                 <button class="btn" id="sidebar-toggle" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="breadcrumb-bar active text-primary px-3">
-                    <span class="breadcrumb-item active fs-6">
+                <div class="breadcrumb-bar text-primary px-3">
+                    <span class="breadcrumb-item fs-6">
                         File-Upload
                     </span>
                 </div>
@@ -106,8 +104,8 @@
                                             </div>
                                             <div
                                                 class=" col-xl-3 col-lg-3 col-md-3 col-5 mt-xl-0 mt-lg-0 mt-md-0 mt-3 m-auto ">
-                                                <input type="submit" value="Upload" class="btn btn-primary w-100"
-                                                    id="myButton">
+                                                <button type="submit" class="btn btn-primary w-100"
+                                                    id="myButton" onclick="alert('file uploaded successfully')">Upload</button>
                                             </div>
                                         </div>
                                     </form>
