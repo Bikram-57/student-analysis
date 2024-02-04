@@ -34,8 +34,8 @@
   /* Sidebar Size & color */
   #sidebar {
     /* sidebar width */
-    max-width: 250px;
-    min-width: 250px;
+    max-width: 260px;
+    min-width: 260px;
     background: var(--bs-dark);
     transition: all 0.35s ease-in-out;
   }
@@ -86,7 +86,7 @@
 
   /* main list contant style */
   a.sidebar-link{
-    padding: 0.625rem 2.625rem;
+    padding: 0.625rem 2.2rem;
     color: white;
     position: relative;
     display: block;
@@ -95,7 +95,7 @@
 
   /* nested list content style */
   a.sidebar-nested-link{
-    padding: 0.200rem 3.625rem;
+    padding: 0.300rem 4rem;
     color: white;
     position: relative;
     display: block;
@@ -115,7 +115,7 @@
 
 /* sidebar toggle */
 #sidebar.collapsed{
-  margin-left: -250px;
+  margin-left: -260px;
 }
 
 /* dashboard photo sizing */
