@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities',
+                pieHole: 0.4,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper ">
+        <aside id="sidebar">
+            <!-- Content for sidebar -->
+            <div class="h-100 ">
+                <div class="sidebar-logo">
+                    <a href="#">Result Analysis</a>
+                </div>
+                <ul class="sidear-nav">
+                    <li class="sidebar-item active">
+                        <a href="dashboard.html" class="sidebar-link">
+                            <i class="bi bi-sliders"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="sidebar-link">
+                            <i class="bi bi-three-dots-vertical"></i> Menu
+                        </span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="upload-file.html" class="sidebar-nested-link">
+                            <i class="bi bi-file-earmark-arrow-up-fill"></i> Upload Data
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="fetch-data.html" class="sidebar-nested-link">
+                            <i class="bi bi-file-earmark-arrow-down-fill"></i> Fetch Data
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="sidebar-link">
+                            <i class="bi bi-clipboard2-data-fill"></i> Analysis
+                        </span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="semester.html" class="sidebar-nested-link">
+                            <i class="bi bi-calendar-fill"></i> Semester Wise
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="yearly.html" class="sidebar-nested-link">
+                            <i class="bi bi-calendar3"></i> Year Wise
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom bg-light">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="breadcrumb-bar text-primary px-3">
+                    <span class="breadcrumb-item fs-6">
+                        Dashboard
+                    </span>
+                </div>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <!-- <img src="admin.png" class="avatar img-fluid" alt="profile-ph"> -->
+                                <span class="text-dark">Bikram Das</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="" class="dropdown-item">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="" class="dropdown-item">Settings & Privacy</a>
+                                <a href="" class="dropdown-item">Help Center</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="" class="dropdown-item">Log-Out</a>
+                            </div>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <main class="content p-lx-4 p-lg-4 p-md-4">
+                <div class="container-fluid">
+                    <div class="mb-2">
+                        Admin Dashboard
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6>Total Student</h6>
+                                            <h2>1000</h2>
+                                        </div>
+                                        <div class="col-4">
+                                            <i class="bi bi-mortarboard-fill fs-3"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6>Total Faculty</h6>
+                                            <h2>1000</h2>
+                                        </div>
+                                        <div class="col-4">
+                                            <i class="bi bi-person-video3 fs-3 text-success"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6>Total Program</h6>
+                                            <h2>2</h2>
+                                        </div>
+                                        <div class="col-4">
+                                            <i class="bi bi-chat-left-text-fill fs-3 text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6>Department</h6>
+                                            <h2>1</h2>
+                                        </div>
+                                        <div class="col-4">
+                                            <i class="bi bi-ui-checks-grid fs-3 text-danger"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6>Degree Wise Student</h6>
+                                        </div>
+                                        <div class="col-6 text-end ">
+                                            <i class="bi bi-download fs-5"></i>
+                                        </div>
+                                    </div>
+
+                                    <div id="donutchart" style="width: 100%; height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6>Department Wise Faculty</h6>
+                                        </div>
+                                        <div class="col-6 text-end ">
+                                            <i class="bi bi-download fs-5"></i>
+                                        </div>
+                                    </div>
+                                    <div id="columnchart_material" style="width: 100%; height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/button.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['bar'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses', 'Profit'],
+                ['2014', 1000, 400, 200],
+                ['2015', 1170, 460, 250],
+                ['2016', 660, 1120, 300],
+                ['2017', 1030, 540, 350]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Company Performance',
+                    subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+                }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
+
+
+</body>
+
+</html>

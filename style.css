@@ -36,7 +36,7 @@
     /* sidebar width */
     max-width: 260px;
     min-width: 260px;
-    background: var(--bs-dark);
+    background-color: #f8f9fa;
     transition: all 0.35s ease-in-out;
   }
 
@@ -64,7 +64,7 @@
 
   /* Color And Size,Weight for Student Analysis */
   .sidebar-logo a{
-    color: antiquewhite;
+    color: black;
     font-size: 1.50rem;
     font-weight: 500;
   }
@@ -91,16 +91,16 @@
   /* main list contant style */
 .sidebar-link{
     padding: 0.625rem 2.2rem;
-    color: white;
+    color: black;
     position: relative;
-    display: block;
+    display: black;
     font-size: 1rem;
   }
 
   /* nested list content style */
   a.sidebar-nested-link{
     padding: 0.300rem 4rem;
-    color: white;
+    color: black;
     position: relative;
     display: block;
     font-size: 1rem;
@@ -154,10 +154,11 @@ img{
 }
 
 .active{
-  border-left: 4px solid white;
-  background-color: rgb(44, 44, 44);
+  border-left: 4px solid rgb(32, 3, 255);
+  background-color: rgb(215, 227, 248);
 }
 
 .active a{
-  color:antiquewhite;
+  color:rgb(32, 92, 246);
 }
+
