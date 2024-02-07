@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Index</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style1.css">
@@ -89,7 +89,7 @@
                 </button>
                 <div class="breadcrumb-bar text-primary px-3">
                     <span class="breadcrumb-item fs-6">
-                        Dashboard
+                        Index
                     </span>
                 </div>
                 <div class="navbar-collapse navbar">
@@ -114,13 +114,13 @@
                 </div>
             </nav>
 
-            <main class="content p-lx-4 p-lg-4 p-md-4">
+            <main class="content p-lx-2 p-lg-2 p-md-2">
                 <div class="container-fluid">
                     <div class="mb-2">
                         Admin Dashboard
                     </div>
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-3 p-1">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 p-1">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
@@ -150,7 +150,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 p-1">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
@@ -165,7 +165,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 p-1">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
@@ -182,8 +182,8 @@
                         </div>
                     </div>
 
-                    <div class="row mt-3">
-                        <div class="col-6">
+                    <div class="row mt-1">
+                        <div class="col-6 p-1">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
@@ -199,7 +199,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 p-1">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
@@ -215,7 +215,37 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="row">
+                        <div class="col-6 p-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                             <h6>Program Wise Student</h6>
+                                            </div>
+                                        <div class="col-4 text-end">
+                                            <i class="bi bi-download fs-4"></i>
+                                        </div>
+                                    </div>
+                                    <div id="chart_div"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 p-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h6>Department Wise Employee strength</h6>
+                                        </div>
+                                        <div class="col-4 text-end">
+                                            <i class="bi bi-download fs-4"></i>
+                                        </div>
+                                    </div>
+                                    <div id="chart_div1"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -249,6 +279,44 @@
             chart.draw(data, google.charts.Bar.convertOptions(options));
         }
     </script>
+    <script src="indexchart3.js"></script>
+    <script type='text/javascript'>
+        google.charts.load('current', {'packages':['annotationchart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('date', 'Date');
+          data.addColumn('number', 'Kepler-22b mission');
+          data.addColumn('string', 'Kepler title');
+          data.addColumn('string', 'Kepler text');
+          data.addColumn('number', 'Gliese 163 mission');
+          data.addColumn('string', 'Gliese title');
+          data.addColumn('string', 'Gliese text');
+          data.addRows([
+            [new Date(2314, 2, 15), 12400, undefined, undefined,
+                                    10645, undefined, undefined],
+            [new Date(2314, 2, 16), 24045, 'Lalibertines', 'First encounter',
+                                    12374, undefined, undefined],
+            [new Date(2314, 2, 17), 35022, 'Lalibertines', 'They are very tall',
+                                    15766, 'Gallantors', 'First Encounter'],
+            [new Date(2314, 2, 18), 12284, 'Lalibertines', 'Attack on our crew!',
+                                    34334, 'Gallantors', 'Statement of shared principles'],
+            [new Date(2314, 2, 19), 8476, 'Lalibertines', 'Heavy casualties',
+                                    66467, 'Gallantors', 'Mysteries revealed'],
+            [new Date(2314, 2, 20), 0, 'Lalibertines', 'All crew lost',
+                                    79463, 'Gallantors', 'Omniscience achieved']
+          ]);
+  
+          var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div1'));
+  
+          var options = {
+            displayAnnotations: true
+          };
+  
+          chart.draw(data, options);
+        }
+      </script>
 
 
 </body>
