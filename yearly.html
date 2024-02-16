@@ -74,8 +74,8 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a href="" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                                <img src="admin.png" class="avatar img-fluid" alt="profile-ph">
-                                <span class="text-dark">Bikram Das</span>
+                                <img src="download.png" class="avatar img-fluid" alt="profile-ph">
+                                <span class="text-dark">Admin</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a href="profile.html" class="dropdown-item">Profile</a>
@@ -161,15 +161,15 @@
             return years;
         }
 
-        // Generate labels for 24 years
+        // Generate labels for 11 years
         const labels = generateYears(11);
 
         // Data configuration
         const data = {
             labels: labels,
             datasets: [{
-                label: 'My First Dataset',
-                data: [65, 59, 80, 81, 56, 55, 40, 57,45, 75, 68,  /* Add your data for 24 years here */],
+                label: 'Yearly CO/PO Attainment',
+                data: [65, 59, 80, 81, 56, 55, 40, 57,45, 75, 68,  /* Add your data for 11 years here */],
                 fill: false,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1
