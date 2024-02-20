@@ -93,6 +93,79 @@
 
             <main class="content p-4">
                 <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="" method="POST" class="needs-validation" novalidate>
+                                <!-- @csrf -->
+                                <div class="row pb-4 px-3">
+                                    <h4 class="py-3 text-muted">Fetch Data</h4>
+                                    <div class="col-xl-4 col-lg-5 col-md-5 col-6 mt-1 mb-1">
+                                        <select name="year" id="years" class="form-select" required>
+                                            <option selected disabled value="">Select Year</option>
+                                            <option value="2024">2024</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select year
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-5 col-md-5 col-6 mt-1 mb-1">
+                                        <select name="cid" id="courseid" class="form-select" required>
+                                            <option disabled selected value="">Select a Course</option>
+                                            <!-- @foreach ($courses as $c)
+                                            <option value="{{ $c['cid'] }}">{{ $c['cname'] }} ({{ $c['cid'] }})</option>
+                                            @endforeach -->
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select course
+                                        </div>
+                                    </div>
+                                    <div class="col-2 my-1">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- @if (session('data')) -->
+                    <div class="mt-2 table-responsive" id="table">
+                        <table class="table table-bordered text-center table-light">
+                            <thead>
+                                <th>Regno</th>
+                                <th>Course ID</th>
+                                <th>Name</th>
+                                <th>Quiz 1</th>
+                                <th>Sessional 1 (15)</th>
+                                <th>Sessional 1 (50)</th>
+                                <th>Quiz 2</th>
+                                <th>Sessional 2 (15)</th>
+                                <th>Sessional 2 (50)</th>
+                                <th>Assignment</th>
+                                <th>Attendance</th>
+                                <th>Total</th>
+                            </thead>
+                            <tbody>
+                                <!-- @foreach ((session('data')) as $row) -->
+                                <tr>
+                                    <td>regno</td>
+                                    <td>cid</td>
+                                    <td>name</td>
+                                    <td>q1</td>
+                                    <td>s1_50</td>
+                                    <td>s1_15</td>
+                                    <td>q2</td>
+                                    <td>s2_15</td>
+                                    <td>s2_50</td>
+                                    <td>assignment</td>
+                                    <td>attendance</td>
+                                    <td>total</td>
+                                </tr>
+                                <!-- @endforeach -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- @endif -->
+                </div>
+                <!-- <div class="container-fluid">
                     <div class="row bg-light">
                         <div class="col-12 text-center fs-4">Analysis Data</div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-6 mt-1 mb-1">
@@ -135,26 +208,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-2" style="display: none;" id="table">
+                    <div class="mt-3" style="display: none;" id="table">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Sl No</th>
+                                    <th style="width: 80px;">Sl No</th>
                                     <th>Subject Id</th>
                                     <th>Subject Name</th>
                                     <th>Date</th>
+                                    <th>View</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th>1</th>
+                                    <td class="text-center">1</td>
                                     <td>CA1601</td>
                                     <td>Software Engineering</td>
                                     <td>
                                         <span id="current-date"></span>
                                     </td>
+                                    <td><a href="#">View</a></td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <th>2</th>
                                     <td>CA1603</td>
                                     <td>Python Programming</td>
@@ -185,21 +260,21 @@
                                     <td>
                                         <span id="current-date"></span>
                                     </td>
-                                </tr>
-                                <tr>
+                                </tr> -->
+                <!-- <tr>
                                     <th>6</th>
                                     <td>CA1662</td>
                                     <td>Python Progamming Lab</td>
                                     <td>
                                         <span id="current-date"></span>
                                     </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </main>
+                                </tr> -->
+                </tbody>
+                </table>
         </div>
+    </div> -->
+    </main>
+    </div>
     </div>
 
     <script>
